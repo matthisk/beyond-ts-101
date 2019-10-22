@@ -7,7 +7,7 @@ namespace Solution2 {
     }
   };
 
-  type Pick<T, K extends keyof T> = { [P in K]: T[K] }
+  type Pick<T, K extends keyof T> = { [P in K]: T[P] }
 
   declare function pick<T, K extends keyof T>(item: T, ...names: K[]): Pick<T, K>;
 }

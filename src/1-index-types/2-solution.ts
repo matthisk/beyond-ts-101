@@ -4,7 +4,7 @@
 namespace Solution2 {
   const me = {
     name: 'Matthisk',
-    age: 26,
+    age: 27,
     address: {
       city: 'Amsterdam',
     }

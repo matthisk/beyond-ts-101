@@ -1,4 +1,4 @@
-type EmailAddress = string | string[] | null | undefined;
+type EmailAddress = string | string[] | null;
 
 type NonNullableEmailAddress = NonNullable<EmailAddress>;
 
@@ -6,11 +6,13 @@ type NonNullableEmailAddress = NonNullable<EmailAddress>;
 //   | string
 //   | string[]
 //   | null
-//   | undefined
 // >;
 
 // type NonNullableEmailAddress =
 //   | NonNullable<string>
 //   | NonNullable<string[]>
-//   | NonNullable<null>
-//   | NonNullable<undefined>;
+//   | NonNullable<null>;
+
+// type NonNullableEmailAddress =
+//   | string
+//   | string[];

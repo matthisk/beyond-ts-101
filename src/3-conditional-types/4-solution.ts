@@ -9,7 +9,11 @@ namespace Solution4 {
 
   type Exclude<T, U> = T extends U ? never : T;
 
-  function withoutAddress(person: Person): any {
+  type E0 = Exclude<keyof Person, 'address'>;
+
+  // How can we use Excude to fill in the return type?
+
+  function withoutAddress<T extends Person>(person: T) {
     const { address, ...rest } = person;
     return rest;
   }

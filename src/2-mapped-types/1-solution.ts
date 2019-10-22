@@ -13,5 +13,7 @@ namespace Solution1 {
     [P in keyof T]?: T[P]
   }
 
+  type PartialPerson = Partial<Person>;
+
   // How can we use this to write a function that can override some keys of a Person
 }

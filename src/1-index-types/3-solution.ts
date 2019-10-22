@@ -4,7 +4,7 @@
 namespace Solution3 {
   const me = {
     name: 'Matthisk',
-    age: 26,
+    age: 27,
     address: {
       city: 'Amsterdam',
     }
@@ -16,4 +16,6 @@ namespace Solution3 {
   function getIn<T>(obj: T, ...names) {
     return names.reduce((acc, x) => acc[x] ? acc[x] : x, obj);
   }
+
+  const result = getIn(me, 'address', 'city');
 }

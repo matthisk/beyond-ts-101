@@ -1,10 +1,10 @@
 /**
  * Index Types: get property from object
  */
-namespace Solution1 {
+namespace Problem1 {
   const me = {
     name: 'Matthisk',
-    age: 26,
+    age: 27,
     address: {
       city: 'Amsterdam',
     }
@@ -15,4 +15,8 @@ namespace Solution1 {
   }
 
   const name = getProperty(me, 'name');
+
+  // How can we express a type Keys which captures a union of all allowed keys on 'me'?
+
+  type Keys = keyof typeof me;
 }

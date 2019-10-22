@@ -19,4 +19,8 @@ namespace Solution3 {
   };
 
   // How can we use this to implement the type of Object.freeze?
+
+  declare function freeze<T>(item: T): Readonly<T>;
+
+  const result = Object.freeze({ a: 0 });
 }

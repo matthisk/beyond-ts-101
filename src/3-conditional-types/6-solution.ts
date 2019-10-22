@@ -1,8 +1,6 @@
 namespace Solution6 {
   type NonFunctionKeys<T extends object> = {
-
     [K in keyof T]: T[K] extends Function ? never : K
-
   }[keyof T];
 
   type Keys = NonFunctionKeys<Pizza>;

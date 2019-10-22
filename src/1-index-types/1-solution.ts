@@ -4,17 +4,19 @@
 namespace Solution1 {
   const me = {
     name: 'Matthisk',
-    age: 26,
+    age: 27,
     address: {
       city: 'Amsterdam',
     }
   };
 
-  function getProperty<T, K extends keyof T>(item: T, name: K): T[K] {
-    return item[name];
-  }
+  declare function getProperty<T, K extends keyof T>(item: T, name: K): T[K];
 
   const name = getProperty(me, 'name');
 
   // How can we use this to implement underscore's `pluck` method?
+
+  declare function pluck<T, K extends keyof T>(items: T[], name: K): T[K][];
+
+  const result = pluck([me], 'age');
 }
